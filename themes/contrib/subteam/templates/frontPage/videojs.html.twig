@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a formatted video field.
+ *
+ * Available variables:
+ * - items: A collection of videos.
+ * - player_attributes: Player options including the following:
+ *   - width: The width of the video (if known).
+ *   - height: The height of the video (if known).
+ *   - autoplay: Autoplay on or off
+ *
+ * @ingroup themeable
+ */
+#}
+
+{# affiche que ce lecteur sur la front Page #}
+
+{% if is_front %}
+<video data-setup="{}" class="video-js vjs-default-skin videoPreview" preload="{{ player_attributes.preload }}" {{ player_attributes.controls ? 'controls' : '' }} style="width:100%;height:100vh;" {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }} onended="previewEnded()">
+  {% for user in items %}
+    <source src="{{ user }}"/>
+  {% endfor %}
+</video>
+{# le lecteur sur toutes les autres pages #}
+{% else %}
+<video data-setup="{}" class="video-js vjs-default-skin" preload="{{ player_attributes.preload }}" {{ player_attributes.controls ? 'controls' : '' }}  {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }}>
+  {% for user in items %}
+    <source src="{{ user }}"/>
+  {% endfor %}
+</video>
+{% endif %}
+

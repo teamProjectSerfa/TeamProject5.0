@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+$logged_in = \Drupal::currentUser()->isAuthenticated();
+ 
+function subteam_preprocess_page(&$variables) {
+    if($variables['is_front']){
+      $variables['#attached']['library'][] = 'subteam/custom';
+  }
+}

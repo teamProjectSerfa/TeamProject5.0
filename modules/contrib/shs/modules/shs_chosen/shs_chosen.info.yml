@@ -1,0 +1,13 @@
+name: 'Simple hierarchical select: Chosen'
+type: module
+description: 'Integrates Chosen with Simple hierarchical select.'
+dependencies:
+  - chosen:chosen
+  - shs:shs
+core: 8.x
+package: User interface
+
+# Information added by Drupal.org packaging script on 2019-10-21
+version: '8.x-1.0-alpha4+2-dev'
+project: 'shs'
+datestamp: 1571685189

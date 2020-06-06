@@ -2,7 +2,7 @@
 
 namespace Drupal\hierarchical_term_formatter_test\ParamConverter;
 
-use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\ParamConverter\ParamConverterInterface;
 use Symfony\Component\Routing\Route;
 
@@ -21,10 +21,10 @@ class ViewModeConverter implements ParamConverterInterface {
   /**
    * Constructs a ViewModeConverter object.
    *
-   * @param \Drupal\Core\Entity\EntityManagerInterface $entity_manager
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager
    *   The entity manager service.
    */
-  public function __construct(EntityManagerInterface $entity_manager) {
+  public function __construct(EntityTypeManagerInterface $entity_manager) {
     $this->storage = $entity_manager->getStorage('entity_view_mode');
   }
 

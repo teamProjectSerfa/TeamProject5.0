@@ -13,7 +13,7 @@ trait TermCreationTrait {
   protected function createTerms(array $items, $parent_id = 0) {
     foreach ($items as $key => $item) {
       $name = (is_array($item)) ? $key : $item;
-      $term = $this->container->get('entity.manager')->getStorage('taxonomy_term')->create([
+      $term = $this->container->get('entity_type.manager')->getStorage('taxonomy_term')->create([
         'name' => $name,
         'vid' => 'numbers',
       ]);

@@ -18,6 +18,15 @@ class HierarchicalTermFormatterErrorTest extends BrowserTestBase {
   use TermCreationTrait;
 
   /**
+   * The default theme to use during testing.
+   *
+   * @see https://www.drupal.org/node/3083055
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $defaultTheme = 'stark';
+
+  /**
    * Collection of taxonomy terms created for this test.
    *
    * An array whose keys are term names and whose
@@ -68,7 +77,7 @@ class HierarchicalTermFormatterErrorTest extends BrowserTestBase {
    */
   public function testFormatterError($view_mode) {
     // Create a node.
-    $node = $this->container->get('entity.manager')->getStorage('node')->create([
+    $node = $this->container->get('entity_type.manager')->getStorage('node')->create([
       'title' => $this->randomMachineName(),
       'type' => 'number_story',
       'field_number' => $this->createdTerms['1.1.1'],
@@ -82,7 +91,7 @@ class HierarchicalTermFormatterErrorTest extends BrowserTestBase {
     $this->assertResponse(200);
 
     // Should be the same if we remove the term.
-    $term = $this->container->get('entity.manager')->getStorage('taxonomy_term')->load($this->createdTerms['1.1.1']);
+    $term = $this->container->get('entity_type.manager')->getStorage('taxonomy_term')->load($this->createdTerms['1.1.1']);
     $term->delete();
 
     $this->container->get('cache_tags.invalidator')->invalidateTags($node->getCacheTagsToInvalidate());

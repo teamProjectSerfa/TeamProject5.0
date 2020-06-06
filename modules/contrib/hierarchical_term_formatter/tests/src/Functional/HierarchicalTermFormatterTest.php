@@ -17,6 +17,15 @@ class HierarchicalTermFormatterTest extends BrowserTestBase {
   use TermCreationTrait;
 
   /**
+   * The default theme to use during testing.
+   *
+   * @see https://www.drupal.org/node/3083055
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $defaultTheme = 'stark';
+
+  /**
    * The privileged user performing the actions.
    *
    * @var \Drupal\Core\Session\AccountInterface
@@ -99,7 +108,7 @@ class HierarchicalTermFormatterTest extends BrowserTestBase {
    */
   public function testFormatter($term_label, $expected) {
     // Create the node.
-    $node = $this->container->get('entity.manager')->getStorage('node')->create([
+    $node = $this->container->get('entity_type.manager')->getStorage('node')->create([
       'title' => $this->randomMachineName(),
       'type' => 'number_story',
       'field_number' => $this->createdTerms[$term_label],

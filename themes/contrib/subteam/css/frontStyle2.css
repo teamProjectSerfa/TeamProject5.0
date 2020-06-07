@@ -1,0 +1,188 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+ /*.path-frontpage{
+    margin:0;
+    padding:0;
+    background-image: url("kiko.jpg")no-repeat center fixed; 
+    background-size: 300px 150px; 
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+   
+
+.wrapper {
+    max-width: 100%;
+    height: 100%;
+    background-image: url("img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+.navbar{
+    position: absolute;
+    z-index: 1;
+}
+/* positionnemnt du titre */
+.views-field-title{
+    position: absolute;
+    top: 35%;
+    left:15%;
+    font-size: 3em;
+    z-index: 1;
+    color: #e5e5e5;
+}
+/* enleve le padiding a coté de la vue */
+ol, ul {
+    padding-left: 0;
+}
+.previewImage,
+.previewVideo {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.previewContainer {
+    position: relative;
+    margin-left: 0;
+
+}
+/* style pour video JS */
+.video-js .vjs-big-play-button {
+    display: none;
+}
+
+.video-js{
+    font-size: 40px !important;
+}
+.video-js .vjs-control-bar {
+    width: 20%;
+    left: 15%;
+    top: 60%;
+    height: 3em; 
+    background-color: #2B333F;
+    background-color:  rgba(51,51,51,0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.video-js .vjs-control {
+    width: auto;
+}
+.video-js .vjs-current-time { display: none; }
+.video-js .vjs-time-divider { display: none; }
+.video-js .vjs-duration { display: none; }
+.video-js .vjs-remaining-time { display: none; }
+.video-js .vjs-slider-horizontal { display: none;}
+.video-js .vjs-volume-level { display: none;}
+.video-js .vjs-slider-bar { display: none;}
+.video-js .vjs-volume-bar { display: none; }
+.video-js .vjs-progress-control { display: none; }
+.video-js .vjs-fullscreen-control{ display: none;}
+.video-js .vjs-volume-menu-button { 
+ 
+color: white;
+   
+    
+}
+
+.video-js .vjs-mute-control { 
+    margin: auto;
+    color: white;
+}
+.video-js .vjs-play-control {
+    color: white;
+}
+.video-js .vjs-big-play-button:before, .video-js .vjs-control:before {
+    position: initial;
+}
+.video-js .vjs-volume-menu-button:before{
+    position: initial;
+}
+.vjs-menu-button-inline:hover .vjs-menu, .vjs-menu-button-inline:focus .vjs-menu, .vjs-menu-button-inline.vjs-slider-active .vjs-menu {
+    display: none;
+} 
+.video-js .vjs-menu-button-inline:hover, .video-js .vjs-menu-button-inline:focus, .video-js .vjs-menu-button-inline.vjs-slider-active, .video-js.vjs-no-flex .vjs-menu-button-inline {
+    width: auto;
+    
+}
+.vjs-menu-button-inline:hover .vjs-menu,.vjs-menu-button-inline:focus .vjs-menu,.vjs-menu-button-inline.vjs-slider-active .vjs-menu{display:none;}
+.vjs-no-flex .vjs-menu-button-inline:hover .vjs-menu,.vjs-no-flex .vjs-menu-button-inline:focus .vjs-menu,.vjs-no-flex .vjs-menu-button-inline.vjs-slider-active .vjs-menu{display: none;} 
+
+.video-js .vjs-play-control, .video-js .vjs-remaining-time, .video-js .vjs-volume-menu-button {
+    border-right: none;
+}
+
+.vjs-icon-volume-mute:before, .video-js .vjs-mute-control.vjs-vol-0:before, .video-js .vjs-volume-menu-button.vjs-vol-0:before {
+    font-family: VideoJS !important;
+    content: '\f104' !important;
+    font-size: 100px;
+    line-height: 1.25;
+  }
+.vjs-icon-volume-high:before, .video-js .vjs-mute-control:before, .video-js .vjs-volume-menu-button:before {
+    font-family: VideoJS !important;
+    content: '\f107' !important;
+    font-size: 100px;
+    line-height: 1.25;
+  }
+  .video-js .vjs-control.vjs-play-control:before {
+    font-family: nf-icon;
+    content: "\e646";
+    font-size: 1.8em;;
+      line-height: initial;
+  }
+  .video-js .vjs-control.vjs-play-control.vjs-playing:before {
+    font-family: nf-icon;
+    content: "\e645";
+    font-size: 1.8em;;
+    line-height: initial;
+  }
+
+/* liste des categories */
+
+.hideMin{
+    display: none;
+}
+.block-title{
+    border-bottom: 1px solid #eeeeee;
+}
+.titleCat{
+    font-size: 2em;
+}
+
+.previewOverlay{
+    background-color: rgba(51,51,51,0.150);
+    border-radius: 0% 15% 0% 15%;
+}
+
+.previewOverlay>h3{
+    font-size: 3em;
+}
+.navbar-nav > li > a {
+    margin-right: 30px;
+    font-size: 15px;
+    
+}
+
+img{
+
+    margin-top:20px;
+    margin-left:15px;
+   width:105%;
+
+}
+.container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+}

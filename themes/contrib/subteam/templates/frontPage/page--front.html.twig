@@ -108,9 +108,14 @@
 {% endif %}
 
 {% else %}
-<header>
+<header class="front-nonauth">
 {{ page.navigation }}
- {{ page.navigation_collapsible }}
-</header>
+<div class='login'>
+  {{ page.navigation_collapsible }}
+ </div>
 
+</header>
+<img class="front-picture"
+     src="teamproject/themes/contrib/subteam/css/img.png"
+     alt="frontPic">
 {% endif %}

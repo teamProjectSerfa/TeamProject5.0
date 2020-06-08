@@ -182,3 +182,18 @@ background-color: #adb0c2;}
     border-bottom: 0px solid #eeeeee;
     color: #eeeeee;
 }
+
+.hhhh{
+    font-weight: 900;
+    /* margin-bottom : 0px; */
+}
+.page-header{
+    text-transform: uppercase;
+    border-bottom: 1px solid #eeeeee;   
+    margin-right: 50px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: red;
+
+}
